@@ -6,7 +6,7 @@
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (XML)
 
 ### 1. What is XML?
 
@@ -157,7 +157,7 @@ class MainActivity : AppCompatActivity() {
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (LinearLayout)
 
 ### What is `<LinearLayout>`?
 
@@ -247,7 +247,7 @@ Har child view ek dabba hai — sab ya to upar se neeche (vertical) ya daayein s
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (Attributes of root layout tag)
 
 These attributes are part of the **root layout tag** in Android XML — typically used in `LinearLayout`, `ConstraintLayout`, or other ViewGroups. They define the layout’s **size**, **orientation**, **padding**, and **context**.
 
@@ -330,7 +330,7 @@ To remember these layout attributes, use:
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (TextView)
 
 ### What is `<TextView>`?
 
