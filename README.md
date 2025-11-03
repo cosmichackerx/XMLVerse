@@ -154,6 +154,8 @@ class MainActivity : AppCompatActivity() {
 ---
 ## 🧭 Android Follows ISO/W3C Rules Exactly
 > Let’s compare a standard ISO XML to Android XML:
+
+```yml
 | ISO/W3C Rule                    | Android Example                          | Description               |
 | ------------------------------- | ---------------------------------------- | ------------------------- |
 | Must start with XML declaration | `<?xml version="1.0" encoding="utf-8"?>` | ✅ Always present          |
@@ -163,6 +165,8 @@ class MainActivity : AppCompatActivity() {
 | Namespaces allowed              | `xmlns:android="..."`                    | ✅ Defines schema          |
 | Comments allowed                | `<!-- Comment -->`                       | ✅ Common practice         |
 | UTF-8 encoding                  | `encoding="utf-8"`                       | ✅ Android default         |
+
+```
 
 ## 🧩 Typical XML Structure (ISO-based)
 > Let’s visualize the complete skeleton 👇
