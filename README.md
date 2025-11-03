@@ -242,7 +242,7 @@ Here’s a **complete and structured list** of **all the core XML file types** u
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (XML)
 
 ### 🌍 What Is XML (International Definition)
 **XML (Extensible Markup Language)** is a meta-markup language defined by the **World Wide Web Consortium (W3C)** and standardized by **ISO/IEC 16262**.
