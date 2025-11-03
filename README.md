@@ -152,6 +152,31 @@ class MainActivity : AppCompatActivity() {
 ---
 
 ---
+## 🧩 Typical XML Structure (ISO-based)
+> Let’s visualize the complete skeleton 👇
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ① XML Declaration -->
+
+<!DOCTYPE rootElement SYSTEM "example.dtd">
+<!-- ② Document Type Declaration (optional, defines validation rules) -->
+
+<rootElement xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ③ Root Element (must be only ONE) -->
+
+    <childElement attribute1="value1" attribute2="value2">
+        <!-- ④ Child Element -->
+        Some text content
+    </childElement>
+
+    <emptyElement />
+    <!-- ⑤ Empty (self-closing) Element -->
+
+</rootElement>
+<!-- ⑥ Closing of Root Element -->
+```
+---
+---
 
 ## 🧩 `<LinearLayout>` — Android’s Vertical & Horizontal Container (Separated from Previous XML Concepts)
 
