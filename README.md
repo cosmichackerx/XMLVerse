@@ -718,3 +718,83 @@ submitButton.setOnClickListener {
 ```
 
 ---
+
+---
+
+## 🧩 `<ImageView>` — Displaying Images in Android UI (Separated from Previous Button Concepts)
+
+---
+
+## 🔤 Definitions
+
+### What is `<ImageView>`?
+
+`<ImageView>` is an Android **widget** used to display images such as icons, logos, illustrations, or photos. It supports various image formats and can load resources from the `drawable` folder or external sources.
+
+In this example:
+
+```xml
+<ImageView
+    android:layout_width="298dp"
+    android:layout_height="89dp"
+    android:src="@drawable/ic_launcher_foreground" />
+```
+
+- `layout_width` and `layout_height` define the image size in density-independent pixels (dp)
+- `src` points to the image resource located in `res/drawable/`
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<ImageView>` like a **picture frame 🖼️**:
+- You choose what image to show (`src`)
+- You decide how big the frame should be (`width`, `height`)
+- It’s purely visual — no interaction unless paired with logic
+
+### 🔹 Urdu Analogy
+**`<ImageView>` ek tasveer ka frame hai 📸 — jisme aap koi bhi image lagate hain, lekin woh sirf dikhayi jaati hai, dabayi nahi jaati.**  
+Jaise app ka logo ya kisi button ke upar icon.
+
+### 🧠 Mnemonic: “ImageView = View Image Only”
+- **ImageView** = View-only image  
+- Use `src` to load image  
+- Use `layout_width` and `layout_height` to size it
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic ImageView with Drawable Resource
+
+```xml
+<ImageView
+    android:layout_width="298dp"
+    android:layout_height="89dp"
+    android:src="@drawable/ic_launcher_foreground" />
+```
+
+### 📄 ImageView with Centering and Padding
+
+```xml
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/logo"
+    android:layout_gravity="center"
+    android:padding="12dp" />
+```
+
+### 📄 ImageView with Rounded Corners (via XML shape)
+
+```xml
+<ImageView
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:src="@drawable/profile_pic"
+    android:background="@drawable/rounded_border"
+    android:scaleType="centerCrop" />
+```
+
+---
