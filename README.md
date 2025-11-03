@@ -323,3 +323,79 @@ To remember these layout attributes, use:
 ```
 
 ---
+
+---
+
+## 🧩 `<TextView>` — Displaying Text in Android UI (Separated from Previous Layout Attribute Concepts)
+
+---
+
+## 🔤 Definitions
+
+### What is `<TextView>`?
+
+`<TextView>` is a **widget** in Android used to display **static text** on the screen. It’s one of the most commonly used UI elements for headings, labels, instructions, and messages.
+
+This example shows a styled `TextView` using:
+
+- A predefined **Material style** (`Headline5`)
+- Custom **text content**: `"Muhammad Arslan"`
+- Custom **text color** from resources: `@color/green_500`
+- Layout dimensions: `wrap_content` for both width and height
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<TextView>` like a **label on a jar 🏷️**:
+- It doesn’t change
+- It tells you what’s inside
+- It’s styled to be readable and clear
+
+### 🔹 Urdu Analogy
+**`<TextView>` ek daftar ke board par likha hua naam hai 🪧 — jo sirf dikhata hai, lekin badalta nahi.**  
+Jaise kisi darwazay par likha ho: “Manager Room” — sirf display hota hai, koi action nahi leta.
+
+### 🧠 Mnemonic: “TextView = View Text Only”
+- **TextView** = View-only text  
+- No input, no interaction — just display
+
+---
+
+## 💻 Code Examples
+
+### 📄 Styled TextView Example
+
+```xml
+<TextView
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Muhammad Arslan"
+    android:textColor="@color/green_500" />
+```
+
+### 📄 Minimal TextView Example
+
+```xml
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World!" />
+```
+
+### 📄 TextView with Padding and Gravity
+
+```xml
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Centered Text"
+    android:gravity="center"
+    android:padding="12dp"
+    android:textSize="18sp"
+    android:textColor="@android:color/holo_blue_dark" />
+```
+
+---
