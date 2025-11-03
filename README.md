@@ -240,3 +240,86 @@ Har child view ek dabba hai — sab ya to upar se neeche (vertical) ya daayein s
 ```
 
 ---
+
+---
+
+## 🧩 XML Layout Attributes — Explained Line-by-Line (Separated from Previous LinearLayout Concepts)
+
+---
+
+## 🔤 Definitions
+
+These attributes are part of the **root layout tag** in Android XML — typically used in `LinearLayout`, `ConstraintLayout`, or other ViewGroups. They define the layout’s **size**, **orientation**, **padding**, and **context**.
+
+```xml
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipToPadding="false"
+android:orientation="vertical"
+android:padding="24dp"
+tools:context=".MainActivity"
+```
+
+### 📘 Attribute Breakdown
+
+| Attribute | Meaning |
+|----------|---------|
+| `xmlns:android` | Declares the Android XML namespace — required for all Android attributes |
+| `xmlns:tools` | Declares the tools namespace — used for design-time attributes in Android Studio |
+| `android:layout_width="match_parent"` | Makes the layout stretch to fill the parent’s width |
+| `android:layout_height="match_parent"` | Makes the layout stretch to fill the parent’s height |
+| `android:clipToPadding="false"` | Allows child views to draw outside the padding area |
+| `android:orientation="vertical"` | Stacks child views vertically (top to bottom) |
+| `android:padding="24dp"` | Adds 24dp space inside the layout edges |
+| `tools:context=".MainActivity"` | Tells Android Studio which Activity this layout belongs to (for preview only) |
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of these attributes like **room setup instructions**:
+- `layout_width` and `layout_height` = room size  
+- `padding` = wall cushioning  
+- `orientation` = furniture alignment (vertical or horizontal)  
+- `tools:context` = label on the room door for preview
+
+### 🔹 Urdu Analogy
+**Ye attributes ek kamray ke naqshay ki tarah hain 🏠 — jisme likha hota hai ke kamra kitna bara hai, furniture kis tarah lagaya gaya hai, aur andar kitni jagah chhodi gayi hai.**  
+Jaise `padding` diwaron se doori hai, aur `orientation` furniture ki line ka rukh.
+
+### 🧠 Mnemonic: “W·H·O·P·C·T”
+To remember these layout attributes, use:
+
+- **W – Width** (`layout_width`)  
+- **H – Height** (`layout_height`)  
+- **O – Orientation** (`vertical` or `horizontal`)  
+- **P – Padding** (`padding="24dp"`)  
+- **C – ClipToPadding** (`false`)  
+- **T – Tools Context** (`tools:context`)
+
+---
+
+## 💻 Code Examples
+
+### 📄 Root Layout with Annotated Attributes
+
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" <!-- Required Android namespace -->
+    xmlns:tools="http://schemas.android.com/tools" <!-- Design-time tools namespace -->
+    android:layout_width="match_parent" <!-- Fill parent width -->
+    android:layout_height="match_parent" <!-- Fill parent height -->
+    android:clipToPadding="false" <!-- Allow drawing beyond padding -->
+    android:orientation="vertical" <!-- Stack children vertically -->
+    android:padding="24dp" <!-- Add inner spacing -->
+    tools:context=".MainActivity"> <!-- Preview context for Android Studio -->
+
+    <!-- Child views go here -->
+
+</LinearLayout>
+```
+
+---
