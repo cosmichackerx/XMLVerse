@@ -725,7 +725,7 @@ submitButton.setOnClickListener {
 
 ---
 
-## 🔤 Definitions
+## 🔤 Definitions (ImageView)
 
 ### What is `<ImageView>`?
 
