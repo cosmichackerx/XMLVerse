@@ -2,7 +2,7 @@
 
 ---
 
-## 🔤 Definitions
+## Overview 
 
 **XML (Extensible Markup Language)** in Android is a **structured markup format** used to define **UI layouts**, **resources**, and **app structure**. It separates **design** from **logic**, allowing developers to build scalable and maintainable apps.
 
