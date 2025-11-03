@@ -512,3 +512,86 @@ Jaise “ye text title ke neeche ho,” “ye button right corner mein ho” —
 ```
 
 ---
+
+---
+
+## 🧩 `<EditText>` — User Input Field in Android (Separated from Previous RelativeLayout Concepts)
+
+---
+
+## 🔤 Definitions (EditText)
+
+### What is `<EditText>`?
+
+`<EditText>` is an Android **input widget** that allows users to **enter and edit text**. It’s commonly used in forms, login screens, and search bars.
+
+In this example:
+
+```xml
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Enter first name" />
+```
+
+- `android:id` assigns a unique identifier to reference this field in Kotlin/Java.
+- `layout_width` and `layout_height` define the size of the input box.
+- `hint` displays placeholder text when the field is empty.
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<EditText>` like a **blank form field 📝**:
+- It’s where the user types their response.
+- The `hint` is like a **label inside the box** that disappears when typing starts.
+
+### 🔹 Urdu Analogy
+**`<EditText>` ek khaali line hai jahan user apna jawab likhta hai ✍️**  
+Jaise kisi form mein “Naam likhein” likha hota hai — woh `hint` hota hai. Jab user likhna shuru karta hai, woh likha hua ghaib ho jata hai.
+
+### 🧠 Mnemonic: “Edit + Text = Editable Text”
+- **Edit** = User can type or change
+- **Text** = The content being entered
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic EditText with Hint
+
+```xml
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="Enter first name" />
+```
+
+### 📄 Full-Width EditText with Input Type
+
+```xml
+<EditText
+    android:id="@+id/inputEmail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter your email"
+    android:inputType="textEmailAddress"
+    android:padding="12dp" />
+```
+
+### 📄 Password Field Example
+
+```xml
+<EditText
+    android:id="@+id/inputPassword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter password"
+    android:inputType="textPassword"
+    android:padding="12dp" />
+```
+
+---
