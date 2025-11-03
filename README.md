@@ -151,4 +151,92 @@ class MainActivity : AppCompatActivity() {
 
 ---
 
-Let me know when you're ready to scaffold the next section — maybe `ViewBinding vs findViewById`, `DataBinding`, or `Manifest deep dive`?
+---
+
+## 🧩 `<LinearLayout>` — Android’s Vertical & Horizontal Container (Separated from Previous XML Concepts)
+
+---
+
+## 🔤 Definitions
+
+### What is `<LinearLayout>`?
+
+`<LinearLayout>` is a **ViewGroup** in Android that arranges its child views **in a single direction** — either **vertically** (top to bottom) or **horizontally** (left to right).
+
+It is one of the most commonly used layout containers in Android XML for stacking UI elements in a clean, linear order.
+
+- 🔹 Belongs to: `android.widget.LinearLayout`
+- 🔹 Orientation: `vertical` or `horizontal`
+- 🔹 Commonly used for: Forms, menus, stacked buttons, vertical screens
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<LinearLayout>` like a **train 🚆**:
+- Each child view is a **compartment**
+- The train moves in **one direction** — either forward (vertical) or sideways (horizontal)
+- All compartments are **lined up one after another**
+
+### 🔹 Urdu Analogy
+**`<LinearLayout>` ek seedhi line mein lagay hue dabbon wali rail gaari ki tarah hai 🚋**  
+Har child view ek dabba hai — sab ya to upar se neeche (vertical) ya daayein se baayein (horizontal) line mein lagte hain.
+
+### 🧠 Mnemonic: “Linear = Line”
+- **Linear** means **in a line**
+- So `<LinearLayout>` = **Layout in a line**
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic Vertical LinearLayout
+
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to LinearLayout!" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me" />
+
+</LinearLayout>
+```
+
+### 📄 Horizontal LinearLayout Example
+
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="12dp">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_marginStart="12dp" />
+
+</LinearLayout>
+```
+
+---
