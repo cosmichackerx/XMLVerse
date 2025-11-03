@@ -595,3 +595,85 @@ Jaise kisi form mein “Naam likhein” likha hota hai — woh `hint` hota hai. 
 ```
 
 ---
+
+---
+
+## 🧩 `<Button>` — Triggering Actions in Android UI (Separated from Previous EditText Concepts)
+
+---
+
+## 🔤 Definitions (Button)
+
+### What is `<Button>`?
+
+`<Button>` is an Android **interactive widget** that performs an **action when clicked**. It’s used for submitting forms, navigating screens, triggering events, and more.
+
+In this example:
+
+```xml
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/editText2"
+    android:layout_alignParentEnd="true"
+    android:text="Submit" />
+```
+
+- `layout_below` positions the button below another view (`editText2`)
+- `layout_alignParentEnd` aligns it to the right edge of the parent
+- `text` sets the label shown on the button
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<Button>` like a **doorbell 🔔**:
+- You press it → something happens
+- The label tells you what it does (e.g., “Submit”, “Next”, “Login”)
+
+### 🔹 Urdu Analogy
+**`<Button>` ek dabane wali switch hai 🖲️ — jise dabane par koi kaam hota hai.**  
+Jaise “Submit” button form bhejta hai, “Login” button agla screen kholta hai.
+
+### 🧠 Mnemonic: “Button = Action Trigger”
+- **Button** = Triggers logic in Kotlin/Java
+- Often paired with `setOnClickListener` in code
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic Submit Button
+
+```xml
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit" />
+```
+
+### 📄 Positioned Button in RelativeLayout
+
+```xml
+<Button
+    android:id="@+id/btnSubmit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/editText2"
+    android:layout_alignParentEnd="true"
+    android:text="Submit"
+    android:textAllCaps="false"
+    android:layout_marginTop="16dp" />
+```
+
+### 📄 Kotlin Logic to Handle Button Click
+
+```kotlin
+val submitButton = findViewById<Button>(R.id.btnSubmit)
+submitButton.setOnClickListener {
+    Toast.makeText(this, "Form Submitted!", Toast.LENGTH_SHORT).show()
+}
+```
+
+---
