@@ -399,3 +399,116 @@ Jaise kisi darwazay par likha ho: “Manager Room” — sirf display hota hai, 
 ```
 
 ---
+
+---
+
+## 🧩 RelativeLayout — Position-Based UI Design (Separated from Previous LinearLayout Concepts)
+
+---
+
+## 🔤 Definitions (RelativeLayout)
+
+### What is `<RelativeLayout>`?
+
+`<RelativeLayout>` is a **ViewGroup** in Android that allows child views to be **positioned relative to each other** or to the parent container.
+
+Unlike `LinearLayout`, which stacks views in a fixed direction, `RelativeLayout` gives you **flexibility** to place elements:
+- Below or beside other views
+- Centered horizontally or vertically
+- Aligned to parent edges
+
+This layout is ideal for **form designs**, **login screens**, and **custom UI arrangements**.
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<RelativeLayout>` like a **whiteboard 🧭**:
+- You can place sticky notes anywhere
+- Some notes are placed below others
+- Some are aligned to the right or centered
+
+It’s a **freeform canvas** with rules.
+
+### 🔹 Urdu Analogy
+**`<RelativeLayout>` ek khaali board ki tarah hai jahan aap har cheez ko doosri cheez ke hawalay se lagate hain 🧾**  
+Jaise “ye text title ke neeche ho,” “ye button right corner mein ho” — sab kuch relative positioning se hota hai.
+
+### 🧠 Mnemonic: “Relative = Referenced”
+- Views are **positioned by referencing other views**
+- Use `layout_below`, `layout_alignParentEnd`, `layout_centerHorizontal`, etc.
+
+---
+
+## 💻 Code Examples
+
+### 📄 Full RelativeLayout Form Example
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Information Form"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_centerHorizontal="true" />
+
+    <!-- First Name EditText -->
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first name"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName" />
+
+    <!-- Last Name EditText -->
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter last name"
+        android:layout_below="@id/firstName"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter email address"
+        android:layout_below="@id/lastName"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_below="@id/email"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+```
+
+---
