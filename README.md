@@ -1179,7 +1179,7 @@ Jaise ek form ya article jo screen se lamba ho.
 
 ---
 
-## 🧩 `<HorizontalScrollView>` — Sideways Scrolling Container (Separated from Previous CardView Concepts)
+## 🧩 `<HorizontalScrollView>` — Sideways Scrolling Container 
 
 ---
 
@@ -1293,7 +1293,7 @@ Jaise ek photo gallery ya horizontal menu.
 ---
 ---
 
-## 🧩 `<NestedScrollView>` — Scrollable Container Inside Coordinators (Separated from Previous HorizontalScrollView Concepts)
+## 🧩 `<NestedScrollView>` — Scrollable Container Inside Coordinators 
 
 ---
 
