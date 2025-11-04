@@ -877,3 +877,111 @@ Jaise “ye button title ke neeche ho,” “ye text center mein ho” — sab k
 ```
 
 ---
+
+---
+
+## 🧩 `<FrameLayout>` — Layered UI Container (Separated from Previous ConstraintLayout Concepts)
+
+---
+
+## 🔤 Definitions (FrameLayout)
+
+### What is `<FrameLayout>`?
+
+`<FrameLayout>` is a **ViewGroup** in Android that stacks its child views **on top of each other**, like layers. It’s ideal for simple overlays, backgrounds, and single-view screens.
+
+- First child = bottom layer  
+- Last child = top layer  
+- Use `layout_gravity` to position views inside the frame
+
+It’s commonly used for:
+- Splash screens
+- Background overlays
+- Floating buttons or centered messages
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<FrameLayout>` like a **stack of transparent sheets 📄**:
+- You place an image on the bottom
+- Then add text or buttons on top
+- Each layer is visible depending on its position
+
+### 🔹 Urdu Analogy
+**`<FrameLayout>` ek tasveer ke upar chipka hua sticker hai 🖼️ — pehle background lagta hai, phir upar likha hota hai ya button hota hai.**  
+Jaise greeting card mein pehle tasveer hoti hai, phir “Welcome” likha hota hai.
+
+### 🧠 Mnemonic: “Frame = Layered Views”
+- FrameLayout = Layered layout  
+- First added = bottom  
+- Last added = top
+
+---
+
+## 💻 Code Examples
+
+### 📄 Example 1: Background Image + Centered Text
+
+```xml
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Child 1 (Bottom Layer) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_image"
+        android:scaleType="centerCrop" />
+
+    <!-- Child 2 (Top Layer) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Arslan 👑"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:layout_gravity="center" />
+
+</FrameLayout>
+```
+
+---
+
+### 📄 Example 2: Space Theme with Button Overlay
+
+```xml
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/stars"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✨ Welcome to Space, Arslan 👨‍🚀"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch 🚀"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+</FrameLayout>
+```
+
+---
