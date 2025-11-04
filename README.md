@@ -1369,7 +1369,8 @@ Jaise ek profile card ya project summary card.
 
 ### 📄 Dashboard-Style Grid of Cards (Advanced)
 
-```xml<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
