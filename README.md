@@ -1179,6 +1179,236 @@ Jaise ek form ya article jo screen se lamba ho.
 
 ---
 
+## 🧩 `<HorizontalScrollView>` — Sideways Scrolling Container (Separated from Previous CardView Concepts)
+
+---
+
+## 🔤 Definitions (HorizontalScrollView)
+
+### What is `<HorizontalScrollView>`?
+
+`<HorizontalScrollView>` is a **ViewGroup** in Android that enables **horizontal scrolling** of its child layout when the content width exceeds the screen width.
+
+It works similarly to `<ScrollView>`, but scrolls **left to right** instead of top to bottom.
+
+Key rules:
+- Only **one direct child** allowed (usually a `LinearLayout` with `horizontal` orientation)
+- Ideal for image carousels, horizontal menus, or card sliders
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<HorizontalScrollView>` like a **film strip 🎞️**:
+- You swipe sideways to view each frame
+- Content flows left to right
+- Perfect for showcasing items in a row
+
+### 🔹 Urdu Analogy
+**`<HorizontalScrollView>` ek tasveeron ki line hai 📷 — jise aap daayein-baayein scroll karke dekhte hain.**  
+Jaise ek photo gallery ya horizontal menu.
+
+### 🧠 Mnemonic: “Horizontal = Left to Right Scroll”
+- Wrap a horizontal `LinearLayout` inside  
+- Use for sideways navigation  
+- Great for cards, icons, or banners
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic HorizontalScrollView with Images
+
+```xml
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/image1"
+            android:layout_marginEnd="12dp" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/image2"
+            android:layout_marginEnd="12dp" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/image3"
+            android:layout_marginEnd="12dp" />
+
+    </LinearLayout>
+</HorizontalScrollView>
+```
+
+---
+
+### 📄 HorizontalScrollView with Buttons
+
+```xml
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Projects"
+            android:layout_marginStart="12dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore"
+            android:layout_marginStart="12dp" />
+
+    </LinearLayout>
+</HorizontalScrollView>
+```
+
+---
+---
+
+## 🧩 `<NestedScrollView>` — Scrollable Container Inside Coordinators (Separated from Previous HorizontalScrollView Concepts)
+
+---
+
+## 🔤 Definitions (NestedScrollView)
+
+### What is `<NestedScrollView>`?
+
+`<NestedScrollView>` is an advanced version of `<ScrollView>` that supports **nested scrolling** — especially useful when placed inside layouts like `CoordinatorLayout`, `AppBarLayout`, or `CollapsingToolbarLayout`.
+
+It allows smooth interaction between multiple scrollable views and is commonly used in **Material Design** apps where toolbars collapse or float based on scroll behavior.
+
+Key features:
+- Supports nested scrolling coordination
+- Ideal for layouts with collapsing headers or floating buttons
+- Requires AndroidX support library
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<NestedScrollView>` like a **scrollable drawer inside a smart cabinet 🗄️**:
+- It scrolls like a normal drawer
+- But it also **communicates** with the cabinet (toolbar, app bar)
+- Perfect for coordinated UI behavior
+
+### 🔹 Urdu Analogy
+**`<NestedScrollView>` ek aisi file hai jo sirf khud nahi hilti, balkay upar ke header ko bhi saath le kar hilti hai 📂**  
+Jaise ek app mein scroll karne par toolbar chhup jata hai — ye sab nested scrolling se hota hai.
+
+### 🧠 Mnemonic: “Nested = Scroll + Coordinate”
+- NestedScrollView = Scrollable + Interacts with parent layout  
+- Use when toolbar or header needs to respond to scroll
+
+---
+
+## 💻 Code Examples
+
+### 📄 Basic NestedScrollView with LinearLayout
+
+```xml
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:text="Welcome Arslan 👑"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/stars"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue 🚀" />
+
+        <TextView
+            android:text="Lorem ipsum dolor sit amet..."
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+```
+
+---
+
+### 📄 NestedScrollView Inside CoordinatorLayout (Advanced)
+
+```xml
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!-- Toolbar and Image here -->
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Scrollable content here -->
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
+
+---
+---
+
 ## 🧩 `<CardView>` — Material Design Container with Elevation 
 ---
 
