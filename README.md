@@ -798,3 +798,82 @@ Jaise app ka logo ya kisi button ke upar icon.
 ```
 
 ---
+
+---
+
+## 🧩 `<ConstraintLayout>` — Flexible UI Positioning (Separated from Previous ImageView Concepts)
+
+---
+
+## 🔤 Definitions (ConstraintLayout)
+
+### What is `<ConstraintLayout>`?
+
+`<ConstraintLayout>` is a powerful and flexible **ViewGroup** in Android that allows you to **position and size UI elements** relative to each other and to the parent layout using **constraints**.
+
+It replaces older layouts like `RelativeLayout` and `LinearLayout` by offering:
+- Flat hierarchy (no nesting needed)
+- Precise control over alignment, spacing, and responsiveness
+- Better performance for complex UIs
+
+In this example:
+- `TextView` is centered horizontally and placed at the top
+- `Button` is placed below the `TextView` and also centered
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<ConstraintLayout>` like a **pinboard with strings 🧵**:
+- You pin each view to a position using constraints
+- You can stretch, align, or anchor views to each other or the board
+- It’s like designing with invisible ropes
+
+### 🔹 Urdu Analogy
+**`<ConstraintLayout>` ek naqsha hai jisme har cheez ko taaron se baandh kar sahi jagah rakha jata hai 📍**  
+Jaise “ye button title ke neeche ho,” “ye text center mein ho” — sab kuch constraints se control hota hai.
+
+### 🧠 Mnemonic: “Constraint = Controlled Placement”
+- Use `app:layout_constraintX_toYOf="..."` to define relationships
+- Think of each constraint as a **rule** for positioning
+
+---
+
+## 💻 Code Examples
+
+### 📄 Full ConstraintLayout Example
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Arslan 👑"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue 🚀"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+---
