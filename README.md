@@ -985,3 +985,199 @@ Jaise greeting card mein pehle tasveer hoti hai, phir “Welcome” likha hota h
 ```
 
 ---
+
+---
+
+## 🧩 `<ScrollView>` — Making Content Scrollable (Separated from Previous FrameLayout Concepts)
+
+---
+
+## 🔤 Definitions (ScrollView)
+
+### What is `<ScrollView>`?
+
+`<ScrollView>` is a **ViewGroup** in Android that enables **vertical scrolling** of its child content when the content height exceeds the screen height.
+
+It wraps a single child layout (usually a `LinearLayout`) and allows all nested views to be scrollable.
+
+Key rules:
+- Only **one direct child** allowed (usually a layout like `LinearLayout`)
+- Ideal for forms, long articles, or stacked content
+
+---
+
+## 🧠 Mnemonics & Analogies (English + Urdu)
+
+### 🔹 English Analogy
+Think of `<ScrollView>` like a **scrollable paper roll 📜**:
+- You can keep adding content vertically
+- The user scrolls to reveal hidden parts
+- It’s like a long receipt or a news feed
+
+### 🔹 Urdu Analogy
+**`<ScrollView>` ek lambi daftar ki file hai 📄 — jisme neeche neeche aur content hota hai, aur user scroll karke dekh sakta hai.**  
+Jaise ek form ya article jo screen se lamba ho.
+
+### 🧠 Mnemonic: “ScrollView = Scrollable View”
+- Wrap your layout inside it  
+- Enables vertical scrolling  
+- Use `LinearLayout` with `wrap_content` height inside
+
+---
+
+## 💻 Code Examples
+
+### 📄 ScrollView with LinearLayout and Multiple Views
+
+```xml
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Child Views (will scroll) -->
+        <TextView
+            android:text="Welcome Arslan 👑"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/stars"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue 🚀" />
+
+        <!-- Repeat more views to see scroll effect -->
+        <TextView
+            android:text="Lorem ipsum dolor sit amet..."
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+```
+
+## 🌠 Advanced ScrollView Example
+> A “Profile & Settings”–style layout with smooth scroll + nested sections.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#101820"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- 🔹 Header Image -->
+        <ImageView
+            android:id="@+id/profileBanner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/header_image"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/gradient_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🔹 Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Arslan 👑"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 🔹 Description -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scroll down to explore your dashboard ✨"
+            android:textColor="#BBBBBB"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 🔹 Checkbox Section -->
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to continue 🚀"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🔹 DatePicker Section -->
+        <TextView
+            android:text="Select your date of birth:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 🔹 NumberPicker Section -->
+        <TextView
+            android:text="Choose your lucky number:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 🔹 Action Button -->
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue 🚀"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 🔹 Footer Image -->
+        <ImageView
+            android:id="@+id/footerImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/stars"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</ScrollView>
+```
+
+---
