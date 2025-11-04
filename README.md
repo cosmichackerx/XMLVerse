@@ -2,7 +2,7 @@
 
 ---
 
-## 🧩 XML — Android’s Design Language (Separated from Kotlin Logic Section)
+## 🧩 XML — Android’s Design Language 
 
 ---
 
@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity() {
 ---
 ---
 
-## 🧩 `<LinearLayout>` — Android’s Vertical & Horizontal Container (Separated from Previous XML Concepts)
+## 🧩 `<LinearLayout>` — Android’s Vertical & Horizontal Container 
 
 ---
 
@@ -284,7 +284,7 @@ Har child view ek dabba hai — sab ya to upar se neeche (vertical) ya daayein s
 
 ---
 
-## 🧩 XML Layout Attributes — Explained Line-by-Line (Separated from Previous LinearLayout Concepts)
+## 🧩 XML Layout Attributes — Explained Line-by-Line 
 
 ---
 
@@ -367,7 +367,7 @@ To remember these layout attributes, use:
 
 ---
 
-## 🧩 `<TextView>` — Displaying Text in Android UI (Separated from Previous Layout Attribute Concepts)
+## 🧩 `<TextView>` — Displaying Text in Android UI 
 
 ---
 
@@ -443,7 +443,7 @@ Jaise kisi darwazay par likha ho: “Manager Room” — sirf display hota hai, 
 
 ---
 
-## 🧩 RelativeLayout — Position-Based UI Design (Separated from Previous LinearLayout Concepts)
+## 🧩 RelativeLayout — Position-Based UI Design 
 
 ---
 
@@ -556,8 +556,7 @@ Jaise “ye text title ke neeche ho,” “ye button right corner mein ho” —
 
 ---
 
-## 🧩 `<EditText>` — User Input Field in Android (Separated from Previous RelativeLayout Concepts)
-
+## 🧩 `<EditText>` — User Input Field in Android 
 ---
 
 ## 🔤 Definitions (EditText)
@@ -639,7 +638,7 @@ Jaise kisi form mein “Naam likhein” likha hota hai — woh `hint` hota hai. 
 
 ---
 
-## 🧩 `<Button>` — Triggering Actions in Android UI (Separated from Previous EditText Concepts)
+## 🧩 `<Button>` — Triggering Actions in Android UI 
 
 ---
 
@@ -721,8 +720,7 @@ submitButton.setOnClickListener {
 
 ---
 
-## 🧩 `<ImageView>` — Displaying Images in Android UI (Separated from Previous Button Concepts)
-
+## 🧩 `<ImageView>` — Displaying Images in Android UI 
 ---
 
 ## 🔤 Definitions (ImageView)
@@ -801,8 +799,7 @@ Jaise app ka logo ya kisi button ke upar icon.
 
 ---
 
-## 🧩 `<ConstraintLayout>` — Flexible UI Positioning (Separated from Previous ImageView Concepts)
-
+## 🧩 `<ConstraintLayout>` — Flexible UI Positioning 
 ---
 
 ## 🔤 Definitions (ConstraintLayout)
@@ -880,8 +877,7 @@ Jaise “ye button title ke neeche ho,” “ye text center mein ho” — sab k
 
 ---
 
-## 🧩 `<FrameLayout>` — Layered UI Container (Separated from Previous ConstraintLayout Concepts)
-
+## 🧩 `<FrameLayout>` — Layered UI Container 
 ---
 
 ## 🔤 Definitions (FrameLayout)
@@ -988,8 +984,7 @@ Jaise greeting card mein pehle tasveer hoti hai, phir “Welcome” likha hota h
 
 ---
 
-## 🧩 `<ScrollView>` — Making Content Scrollable (Separated from Previous FrameLayout Concepts)
-
+## 🧩 `<ScrollView>` — Making Content Scrollable 
 ---
 
 ## 🔤 Definitions (ScrollView)
@@ -1184,8 +1179,7 @@ Jaise ek form ya article jo screen se lamba ho.
 
 ---
 
-## 🧩 `<CardView>` — Material Design Container with Elevation (Separated from Previous ScrollView Concepts)
-
+## 🧩 `<CardView>` — Material Design Container with Elevation 
 ---
 
 ## 🔤 Definitions (CardView)
